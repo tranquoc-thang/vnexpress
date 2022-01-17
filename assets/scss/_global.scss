@@ -1,0 +1,74 @@
+$color-text: #222;
+$color-background: #fff;
+$color-text-light: #8a758a;
+$color-text-hover: #087cce;
+$color-border: #e5e5e5;
+$color-heading: #4f4f4f;
+$color-purple: #b52759;
+$color-gray-light: #bdbdbd;
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  color: $color-text;
+  overflow-x: hidden;
+  background-color: $color-background;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+}
+
+a {
+  display: block;
+  color: $color-text;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+@mixin flex($align: flex-start, $justify: flex-start, $direction: row, $wrap: nowrap) {
+  display:flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin absolute($top: unset, $right: unset, $bottom: unset, $left: unset) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+.app {
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 2000px;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.caption {
+  font-family: "Merriweather", serif;
+}

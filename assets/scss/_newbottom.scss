@@ -1,0 +1,27 @@
+.newbottom {
+  margin-top: 20px;
+  &-left {
+    border-right: 1px solid $color-border;
+    width: 400px;
+    &-item {
+      margin-right: 20px;
+      margin-bottom: 10px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid $color-border;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    &-caption {
+      margin-bottom: 10px;
+    }
+    &-desc {
+      @include flex(flex-start, space-between);
+    }
+    &-img {
+      cursor: pointer;
+      width: 144px;
+      margin-right: 5px;
+    }
+  }
+}

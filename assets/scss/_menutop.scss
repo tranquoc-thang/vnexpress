@@ -1,0 +1,90 @@
+.menutop {
+  height: 50px;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  top: 0;
+  margin-top: 50px;
+  background-color: $color-background;
+  box-shadow: 0 2px 5px 0 $color-border;
+  &-list {
+    transition: all linear 0.1s;
+    margin: 0 auto;
+    width: 1040px;
+    height: 100%;
+    @include flex(center, space-between);
+  }
+  &-item {
+    font-size: 1.4rem;
+    font-weight: 600;
+    @include flex(center, center);
+    &--logo {
+      display: none;
+      & img {
+        max-width: 20px;
+        margin-right: 10px;
+      }
+      & span {
+        color: $color-purple;
+      }
+    }
+    &--logo.show {
+      @include flex(center, center);
+    }
+    &:hover {
+      color: $color-purple;
+    }
+    &:first-child {
+      padding: 5px;
+      background-color: $color-border;
+      border-radius: 50%;
+      &:hover {
+        background-color: $color-purple;
+        color: white;
+      }
+    }
+    &:nth-child(7):hover {
+      color: #065e9d;
+    }
+    &:nth-child(8):hover {
+      color: #ad9634;
+    }
+    &:nth-child(9):hover {
+      color: #ec326b;
+    }
+    &:nth-child(10):hover {
+      color: #5fae2e;
+    }
+    &:nth-child(11):hover {
+      color: #923a3c;
+    }
+    &:nth-child(12):hover {
+      color: #eb7600;
+    }
+    &:nth-child(13):hover {
+      color: #049b93;
+    }
+    &:nth-child(14):hover {
+      color: #309fcb;
+    }
+    &:nth-child(15):hover {
+      color: #0083d6;
+    }
+    &:last-child {
+      color: $color-gray-light;
+      font-weight: 300;
+      @include flex(center, center);
+      &:hover {
+        color: $color-purple;
+      }
+      & i {
+        font-size: 1.6rem;
+      }
+      & span {
+        margin-right: 5px;
+      }
+    }
+  }
+}

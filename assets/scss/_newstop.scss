@@ -1,0 +1,96 @@
+.newstop {
+  margin-top: 70px;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: 20px;
+  &-main {
+    @include flex();
+    margin-bottom: 20px;
+    &-img {
+      width: 520px;
+      height: 310px;
+    }
+  }
+  &-title {
+    padding: 20px;
+    width: 260px;
+    background-color: #f7f7f7;
+    height: 310px;
+  }
+  &-caption {
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 20px;
+    cursor: pointer;
+    &:hover {
+      color: $color-text-hover;
+    }
+  }
+  &-content {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+  &-sub {
+    max-width: 520px;
+    @include flex(flex-start, space-between);
+    &-item {
+      cursor: pointer;
+      width: calc(50% - 10px);
+    }
+    &-caption {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      line-height: 1.5;
+      cursor: pointer;
+      &:hover {
+        color: $color-text-hover;
+      }
+    }
+    &-content {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+    &-comment {
+      font-size: 1.2rem;
+      cursor: pointer;
+      & i {
+        color: $color-gray-light;
+      }
+      & span {
+        color: $color-text-hover;
+      }
+    }
+    &-view {
+      border-left: 1px solid $color-border;
+      padding: 0 20px;
+      max-width: 260px;
+    }
+    &-label {
+      color: $color-purple;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+    &-auth {
+      margin-top: 30px;
+      @include flex(flex-end, space-between);
+    }
+    &-authimg {
+      background-color: $color-border;
+      border-radius: 50%;
+      width: 50px;
+    }
+    &-authname {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: $color-text-light;
+      margin-bottom: 12px;
+      display: block;
+    }
+  }
+  &-sub-wrap {
+    @include flex();
+  }
+}

@@ -1,0 +1,90 @@
+.header {
+  margin-top: -100px;
+  height: 50px;
+  @include flex(center, space-between);
+  &-left {
+    @include flex(center, center);
+  }
+  &-logo {
+    position: relative;
+    border-right: 1px solid $color-border;
+    padding-right: 2rem;
+    &-img {
+      width: 150px;
+      z-index: 100;
+    }
+    &-background {
+      @include absolute(-10px, unset, unset, -14px);
+      height: 50px;
+      z-index: 0;
+    }
+  }
+  &-date {
+    padding-left: 2rem;
+    font-size: 1.4rem;
+    color: $color-text-light;
+  }
+  &-right {
+    @include flex(center, center);
+  }
+  &-link {
+   @include flex(center,center);
+   border-right: 1px solid $color-border;
+   &-item {
+     padding: 0.8rem 1rem;
+     border: 1px solid $color-border;
+     border-radius: 0.3rem;
+     font-size: 1.4rem;
+     color: $color-text-light;
+     margin-right: 1.5rem;
+     &:hover {
+       background-color: #f7f7f7;
+     }
+     & span {
+       margin-left: 0.5rem;
+     }
+     &:nth-child(1) span {
+       margin-left: 0;
+     }
+     &:nth-child(2) {
+       @include flex();
+     }
+   }
+   &-img {
+     max-width: 14px;
+   }
+  }
+  &-search {
+    margin-left: 1.5rem;
+    border: 1px solid $color-border;
+    border-radius: 5rem;
+    padding: 8px 15px;
+    &-input {
+      max-width: 120px;
+      border: none;
+      outline: none;
+      font-size: 1.5rem;
+    }
+    & i {
+      color: $color-gray-light;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  &-user {
+    cursor: pointer;
+    margin-left: 10px;
+    &:hover span{
+      color: $color-text-hover;
+    }
+    & i, & span {
+      font-size: 1.5rem;
+      color: $color-gray-light;
+    }
+    & span {
+      color: $color-text;
+      margin-left: 5px;
+    }
+  }
+}
+
