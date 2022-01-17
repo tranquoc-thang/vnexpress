@@ -173,6 +173,7 @@ ul {
   margin-top: 50px;
   background-color: #fff;
   box-shadow: 0 2px 5px 0 #e5e5e5;
+  z-index: 100;
 }
 .menutop-list {
   transition: all linear 0.1s;
@@ -384,6 +385,11 @@ ul {
 
 .newbottom {
   margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .newbottom-left {
   border-right: 1px solid #e5e5e5;
@@ -412,6 +418,81 @@ ul {
   cursor: pointer;
   width: 144px;
   margin-right: 5px;
+}
+.newbottom-right {
+  margin-left: 20px;
+  width: calc(100% - 400px);
+}
+
+.chart {
+  width: 100%;
+}
+.chart-heading {
+  height: 50px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.chart-heading-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.chart-heading-item {
+  width: auto !important;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  padding: 0.8rem 1rem;
+  border: 1px solid #087cce;
+  border-radius: 0.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.chart-heading-item--firstchild {
+  border: none;
+  font-weight: 600;
+}
+.chart-heading-item--lastchild {
+  background-color: #087cce;
+  color: #fff;
+}
+.chart-caption {
+  margin: 25px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.chart-caption-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.chart-caption-vaccine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.slick-arrow {
+  position: absolute;
+  padding: 12px;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 20px 20px #fff;
+  z-index: 10;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

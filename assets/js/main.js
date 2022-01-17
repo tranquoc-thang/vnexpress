@@ -492,3 +492,15 @@ const app = {
   },
 };
 app.start();
+
+$(document).ready(function() {
+  $(".chart-heading-list").slick({
+    infinite: false,
+    slidesToShow: 6.5,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    infinite: true,
+    prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="fas fa-chevron-left"></i></button>`,
+    nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="fas fa-chevron-right"></i></button>`,
+  });
+})

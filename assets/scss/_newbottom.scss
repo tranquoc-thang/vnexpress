@@ -1,5 +1,6 @@
 .newbottom {
   margin-top: 20px;
+  @include flex();
   &-left {
     border-right: 1px solid $color-border;
     width: 400px;
@@ -24,4 +25,67 @@
       margin-right: 5px;
     }
   }
+  &-right {
+    margin-left: 20px;
+    width: calc(100% - 400px);
+  }
+}
+
+.chart {
+  width: 100%;
+  &-heading {
+    height: 50px;
+    border-bottom: 1px solid $color-border;
+    &-list {
+      @include flex(center, space-between);
+    }
+    &-item {
+      width: auto !important;
+      font-size: 1.3rem;
+      white-space: nowrap;
+      padding: 0.8rem 1rem;
+      border: 1px solid $color-text-hover;
+      border-radius: 0.2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      &--firstchild {
+        border: none;
+        font-weight: 600;
+      }
+      &--lastchild {
+        background-color: $color-text-hover;
+        color: #fff;
+      }
+    }
+  }
+  &-caption {
+    margin: 25px 0 15px;
+    @include flex(center, space-between);
+    &-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    &-vaccine {
+      @include flex(center, space-between);
+    }
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  padding: 12px;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  background-color: $color-background;
+  box-shadow: 0 0 20px 20px #fff;
+  z-index: 10;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
 }
