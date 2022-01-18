@@ -3,6 +3,7 @@ const menuTopLogo = document.querySelector(".menutop-item--logo");
 const menuTopHome = document.querySelector(".menutop-item--home");
 const menuTopList = document.querySelector(".menutop-list");
 const newBottomList = document.querySelector(".newbottom-left-list");
+const statisticRightList = document.querySelector(".statistic-right-list");
 const app = {
   newsbottom: [
     {
@@ -486,21 +487,62 @@ const app = {
     });
     newBottomList.innerHTML = htmls.join("");
   },
+  renderCovidPerDay: function () {
+    const htmls = this.inflectionStatistic.map((value, index) => {
+      return `
+        <li class="statistic-right-item d-flex">
+          <span class="col-4 statistic-right-province">${value.province}</span>
+          <span class="col-4 statistic-right-infection">+${value.inflectionToday || '-'}</span>
+          <span class="col-4 statistic-right-death">${value.deathToday || '-'}</span>
+        </li>
+      `;
+    })
+    statisticRightList.innerHTML = htmls.join("")
+  },
+  slickSlider: function() {
+    $(document).ready(function () {
+      $("#chart-heading-list").slick({
+        slidesToShow: 6.5,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        infinite: true,
+        prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="fas fa-chevron-left"></i></button>`,
+        nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="fas fa-chevron-right"></i></button>`,
+      });
+      $("#chart-slider-list").slick({
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        infinite: true,
+        prevArrow: `<button type='button' class='slick-prev-slider slick-arrow-slider'><i class="fas fa-chevron-left"></i></button>`,
+        nextArrow: `<button type='button' class='slick-next-slider slick-arrow-slider'><i class="fas fa-chevron-right"></i></button>`,
+      });
+    });
+  },
   start: function () {
+    this.renderCovidPerDay();
     this.scrollStickyMenutop();
     this.renderNewBottom();
+    this.slickSlider();
   },
 };
 app.start();
 
-$(document).ready(function() {
-  $(".chart-heading-list").slick({
-    infinite: false,
-    slidesToShow: 6.5,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    infinite: true,
-    prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="fas fa-chevron-left"></i></button>`,
-    nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="fas fa-chevron-right"></i></button>`,
-  });
-})
+// $(document).ready(function () {
+//   $("#chart-heading-list").slick({
+//     slidesToShow: 6.5,
+//     autoplay: true,
+//     autoplaySpeed: 1000,
+//     infinite: true,
+//     prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="fas fa-chevron-left"></i></button>`,
+//     nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="fas fa-chevron-right"></i></button>`,
+//   });
+//   $("#chart-slider-list").slick({
+//     slidesToShow: 1,
+//     autoplay: true,
+//     autoplaySpeed: 1000,
+//     infinite: true,
+//     prevArrow: `<button type='button' class='slick-prev-slider slick-arrow-slider'><i class="fas fa-chevron-left"></i></button>`,
+//     nextArrow: `<button type='button' class='slick-next-slider slick-arrow-slider'><i class="fas fa-chevron-right"></i></button>`,
+//   });
+// });

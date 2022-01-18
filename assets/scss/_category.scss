@@ -1,0 +1,137 @@
+.category {
+  &-list {
+    @include flex(center, flex-start);
+  }
+  &-item {
+    font-size: 1.2rem;
+    color: $color-text-light;
+    vertical-align: baseline;
+    cursor: pointer;
+    margin-right: 20px;
+    &:hover {
+      color: $color-text-hover;
+    }
+  }
+  &-firstchild {
+    font-size: 1.6rem;
+    border-bottom: 1px solid $color-purple;
+    padding: 6px 0;
+    color: $color-text;
+    font-weight: 600;
+  }
+  &-content {
+    @include flex();
+    padding-bottom: 15px;
+    border-bottom: 1px solid $color-border;
+    margin-bottom: 15px;
+    & > * {
+      width: calc(100% / 3);
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+        border-left: 1px solid $color-border;
+        padding-left: 15px;
+      }
+    }
+  }
+  &-new {
+    &-title {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    &-content {
+      line-height: 1.4;
+      font-size: 1.4rem;
+      color: $color-text;
+      font-family: "Inter", sans-serif;
+    }
+  }
+  &-more {
+    &-item {
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.6;
+      position: relative;
+      padding-bottom: 15px;
+      border-bottom: 1px solid gray;
+      cursor: pointer;
+      &:hover {
+        color: $color-text-hover;
+      }
+      &::before {
+        content: "";
+        @include absolute(10px, unset, unset, 0);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $color-gray-light;
+      }
+    }
+  }
+}
+
+.category {
+  &-wrap {
+    width: calc((100% / 3) * 2);
+    background-color: $color-background-second;
+    padding: 25px;
+    @include flex(flex-start, center);
+    & > * {
+      flex: 1;
+      &:first-child {
+        padding-top: 5px;
+        font-size: 2rem;
+        &:hover {
+          color: $color-text-hover;
+        }
+      }
+      &:last-child {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.table-gold td,
+.table-gold th {
+  border: 1px solid $color-border;
+  padding: 4px;
+}
+
+.table-gold {
+  cursor: pointer;
+}
+
+.sport-match {
+  @include flex();
+}
+
+.match {
+  &-date {
+    margin-bottom: 5px;
+  }
+  &-item {
+    border: 1px solid $color-border;
+    padding: 5px;
+    min-width: 140px;
+    @include flex(flex-start, center, column);
+  }
+  &-team {
+    @include flex(center, space-between);
+    margin-bottom: 5px;
+    &:last-child {
+    }
+    & img {
+      width: 14px;
+    }
+    & span {
+      white-space: nowrap;
+    }
+  }
+  &-item.end {
+    background-color: $color-background-second;
+    & .match-team {
+      @include flex(center, space-between);
+    }
+  }
+}

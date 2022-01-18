@@ -6,6 +6,7 @@ $color-border: #e5e5e5;
 $color-heading: #4f4f4f;
 $color-purple: #b52759;
 $color-gray-light: #bdbdbd;
+$color-background-second: #f7f7f7;
 
 *,
 ::after,
@@ -71,4 +72,13 @@ ul {
 
 .caption {
   font-family: "Merriweather", serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color-gray-light;
+  border-radius: 1rem;
 }

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VnExpress - Báo tiếng Việt nhiều người xem nhất</title>
     <link rel="icon" href="./assets/images/icon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -173,7 +177,7 @@
           <div class="newbottom-right">
             <div class="chart">
               <div class="chart-heading">
-                <ul class="chart-heading-list">
+                <ul id="chart-heading-list" class="chart-heading-list">
                   <li class="chart-heading-item chart-heading-item--firstchild">Chăm sóc F0</li>
                   <li class="chart-heading-item">Cách ly ở nhà</li>
                   <li class="chart-heading-item">Bác sĩ tư vấn</li>
@@ -193,50 +197,95 @@
                 <div class="chart-caption-vaccine">
                   <div class="vaccine-title">
                     Độ phủ vaccine
+                  </div
+                  >
+                  <div class='col-12 progress-value'>
+                    <div class='progress progress-vaccine'>
+                        <div id="total-progress" class='progress-bar vaccine-progress' role='progressbar' style='width: 75%'
+                            aria-valuenow='100' aria-valuemin='0' aria-valuemax='100'>75,1% dân số</div>
+                    </div>
                   </div>
-                  <input class="vaccine-progress" placeholder="75,1% dân số"/>
+                  <!-- <input type="progress"  class="vaccine-progress" placeholder="75,1% dân số"/> -->
                 </div>
               </div>
-              <div class="chart-statistic">
-                <div class="statistic-left">
-                  <div class="statistic-left-title">
-                    <span></span>
-                    <span>Công bố hôm nay</span>
-                    <span>Thay đổi trong 7 ngày</span>
+              <div class="chart-statistic d-flex">
+                <div class="statistic-left col-6">
+                  <div class="statistic-left-title d-flex">
+                    <div class="col-2"></div>
+                    <div class="col-5">Công bố hôm nay</div>
+                    <div class="col-5">Thay đổi trong 7 ngày</div>
                   </div>
-                  <div class="statistic-infection">
-                    <div class="statistic-infection-today">21.691</div>
-                    <div class="statistic-infection-week">
+                  <div class="statistic-infection d-flex">
+                    <div class="col-2">Nhiễm</div>
+                    <div class="col-5 statistic-infection-today">21.691</div>
+                    <div class="col-5 statistic-infection-week">
                       <span>-6%</span>
-
+                      <svg style="fill: rgba(220, 43, 51, 0.3); stroke: #dc2b33;" class="sparkline sparkline--red sparkline--filled" width="50" height="15" stroke-width="1"><path class="sparkline--fill" d="M4 3.31 L 4 3.31 L 7.230769230769231 3.55 L 10.461538461538462 3.56 L 13.692307692307693 3.44 L 16.923076923076923 3 L 20.153846153846153 3.08 L 23.384615384615387 3.48 L 26.615384615384617 3.55 L 29.846153846153847 3.53 L 33.07692307692308 3.54 L 36.30769230769231 3.56 L 39.53846153846154 4.09 L 42.769230769230774 3.6 L 46 3.6 V 15 L 4 15 Z" stroke="none"></path><path class="sparkline--line" d="M4 3.31 L 4 3.31 L 7.230769230769231 3.55 L 10.461538461538462 3.56 L 13.692307692307693 3.44 L 16.923076923076923 3 L 20.153846153846153 3.08 L 23.384615384615387 3.48 L 26.615384615384617 3.55 L 29.846153846153847 3.53 L 33.07692307692308 3.54 L 36.30769230769231 3.56 L 39.53846153846154 4.09 L 42.769230769230774 3.6 L 46 3.6" fill="none"></path></svg>
                     </div>
                   </div> 
-                  <div class="statistic-serious">
-                    <div class="statistic-serious-today">6.218</div>
-                    <div class="statistic-serious-week">
+                  <div class="statistic-serious d-flex">
+                    <div class="col-2">Nặng</div>
+                    <div class="col-5 statistic-serious-today">6.218</div>
+                    <div class="col-5 statistic-serious-week">
                       <span>-7%</span>
-
+                      <svg style="fill: rgba(138, 24, 57, 0.3); stroke: #8A1839;" class="sparkline sparkline--blue sparkline--filled" width="50" height="15" stroke-width="1"><path class="sparkline--fill" d="M4 3 L 4 3 L 7.230769230769231 3.14 L 10.461538461538462 3.38 L 13.692307692307693 3.37 L 16.923076923076923 3.52 L 20.153846153846153 3.53 L 23.384615384615387 3.6 L 26.615384615384617 3.64 L 29.846153846153847 3.76 L 33.07692307692308 3.86 L 36.30769230769231 3.98 L 39.53846153846154 4.14 L 42.769230769230774 4.17 L 46 4.19 V 15 L 4 15 Z" stroke="none"></path><path class="sparkline--line" d="M4 3 L 4 3 L 7.230769230769231 3.14 L 10.461538461538462 3.38 L 13.692307692307693 3.37 L 16.923076923076923 3.52 L 20.153846153846153 3.53 L 23.384615384615387 3.6 L 26.615384615384617 3.64 L 29.846153846153847 3.76 L 33.07692307692308 3.86 L 36.30769230769231 3.98 L 39.53846153846154 4.14 L 42.769230769230774 4.17 L 46 4.19" fill="none"></path></svg>
                     </div>
                   </div> 
-                  <div class="statistic-death">
-                    <div class="statistic-death-today">179</div>
-                    <div class="statistic-death-week">
-                      <span>-7%</span>
-
+                  <div class="statistic-death d-flex">
+                    <div class="col-2">Tử vong</div>
+                    <div class="col-5 statistic-death-today">179</div>
+                    <div class="col-5 statistic-death-week">
+                      <span>-17%</span>
+                      <svg style="fill: rgba(34, 34, 34, 0.3); stroke: #222222" class="sparkline sparkline--orange sparkline--filled" width="50" height="15" stroke-width="1"><path class="sparkline--fill" d="M4 3 L 4 3 L 7.230769230769231 3.67 L 10.461538461538462 3.63 L 13.692307692307693 3.5 L 16.923076923076923 3.6 L 20.153846153846153 3.48 L 23.384615384615387 3.3 L 26.615384615384617 3.6 L 29.846153846153847 3.41 L 33.07692307692308 3.75 L 36.30769230769231 4.32 L 39.53846153846154 4.73 L 42.769230769230774 4.92 L 46 4.92 V 15 L 4 15 Z" stroke="none"></path><path class="sparkline--line" d="M4 3 L 4 3 L 7.230769230769231 3.67 L 10.461538461538462 3.63 L 13.692307692307693 3.5 L 16.923076923076923 3.6 L 20.153846153846153 3.48 L 23.384615384615387 3.3 L 26.615384615384617 3.6 L 29.846153846153847 3.41 L 33.07692307692308 3.75 L 36.30769230769231 4.32 L 39.53846153846154 4.73 L 42.769230769230774 4.92 L 46 4.92" fill="none"></path></svg>
                     </div>
                   </div> 
                 </div>
-                <div class="statistic-right">
-                  <div class="statistic-right-title">
-                    <span class="statistic-right-heading statistic-right-heading--province">Tỉnh</span>
-                    <span class="statistic-right-heading statistic-right-heading--infection">Nhiễm hôm nay</span>
-                    <span class="statistic-right-heading statistic-right-heading--death">Tử vong hôm nay</span>
+                <div class="statistic-right col-6">
+                  <div class="statistic-right-title d-flex">
+                    <span class="col-4 statistic-right-heading statistic-right-heading--province">Tỉnh</span>
+                    <span class="col-4 statistic-right-heading statistic-right-heading--infection">Nhiễm hôm nay</span>
+                    <span class="col-4 statistic-right-heading statistic-right-heading--death">Tử vong hôm nay</span>
                   </div>
                   <ul class="statistic-right-list">
-                    <li class="statistic-right-item">
-                      <span class="statistic-right-province">Cà Mau</span>
-                      <span class="statistic-right-infection">+5.769</span>
-                      <span class="statistic-right-death">4</span>
+                    <li class="statistic-right-item d-flex">
+                      <span class="col-4 statistic-right-province">Cà Mau</span>
+                      <span class="col-4 statistic-right-infection">+5.769</span>
+                      <span class="col-4 statistic-right-death">4</span>
+                    </li>
+                    <li class="statistic-right-item d-flex">
+                      <span class="col-4 statistic-right-province">Cà Mau</span>
+                      <span class="col-4 statistic-right-infection">+5.769</span>
+                      <span class="col-4 statistic-right-death">4</span>
+                    </li>
+                    <li class="statistic-right-item d-flex">
+                      <span class="col-4 statistic-right-province">Cà Mau</span>
+                      <span class="col-4 statistic-right-infection">+5.769</span>
+                      <span class="col-4 statistic-right-death">4</span>
+                    </li>
+                    <li class="statistic-right-item d-flex">
+                      <span class="col-4 statistic-right-province">Cà Mau</span>
+                      <span class="col-4 statistic-right-infection">+5.769</span>
+                      <span class="col-4 statistic-right-death">4</span>
+                    </li>
+                    <li class="statistic-right-item d-flex">
+                      <span class="col-4 statistic-right-province">Cà Mau</span>
+                      <span class="col-4 statistic-right-infection">+5.769</span>
+                      <span class="col-4 statistic-right-death">4</span>
+                    </li>
+                    <li class="statistic-right-item d-flex">
+                      <span class="col-4 statistic-right-province">Cà Mau</span>
+                      <span class="col-4 statistic-right-infection">+5.769</span>
+                      <span class="col-4 statistic-right-death">4</span>
+                    </li>
+                    <li class="statistic-right-item d-flex">
+                      <span class="col-4 statistic-right-province">Cà Mau</span>
+                      <span class="col-4 statistic-right-infection">+5.769</span>
+                      <span class="col-4 statistic-right-death">4</span>
+                    </li>
+                    <li class="statistic-right-item d-flex">
+                      <span class="col-4 statistic-right-province">Cà Mau</span>
+                      <span class="col-4 statistic-right-infection">+5.769</span>
+                      <span class="col-4 statistic-right-death">4</span>
                     </li>
                   </ul>
                 </div>
@@ -255,21 +304,336 @@
                   <i class="fas fa-medkit"></i>
                   <span>Bệnh thông thường</span>
                 </div>
-                <ul class="chart-slider-list">
+                <ul id="chart-slider-list" class="chart-slider-list">
                   <li class="chart-slider-item">Chân sưng phù sau khi vận động nhiều</li>
                   <li class="chart-slider-item">Kỹ thuật mới điều trị hiếm muộn, sinh con khỏe mạnh</li>
                   <li class="chart-slider-item">Phụ nữ bị tăng áp động mạch phổi rất nguy hiểm</li>
                 </ul>
-                <div class="chart-slider-button">
+                <!-- <div class="chart-slider-button">
                   <div class="chart-slider-button--left"><i class="fas fa-chevron-left"></i></div>
                   <div class="chart-slider-button--right"><i class="fas fa-chevron-right"></i></div>
-                </div>
+                </div> -->
                 <div class="chart-slider-question">
                   <i class="fas fa-question-circle"></i>
                   <span>Hỏi bác sĩ</span>
                 </div>
               </div>
             </div>
+
+            <div class="business category">
+              <ul class="category-list">
+                <li class="category-item category-firstchild caption">Kinh doanh</li>
+                <li class="category-item">Quốc tế</li>
+                <li class="category-item">Doanh nghiệp</li>
+                <li class="category-item">Chứng khoán</li>
+                <li class="category-item">Bất động sản</li>
+                <li class="category-item">Bảo hiểm</li>
+                <li class="category-item">E-Commerce 4.0</li>
+              </ul>
+              <div class="category-content">
+                <img src="./assets/images/categorybusiness.jpg" alt="image" class="category-img">
+                <div class="category-new-left">
+                  <div class="category-new-title newstop-sub-caption caption">Thành tỷ phú sau khi bỏ học, mở công ty thanh toán</div>
+                  <div class="category-new-content newstop-sub-comment">CEO Checkout.com Guillaume Pousaz bỏ dở việc học khi cha bị ung thư, sau đó học lướt sóng, rồi tham gia lĩnh</div>
+                </div>
+                <div class="category-new-right">
+                  <div class="category-new-title newstop-sub-caption caption">Cận Tết, gửi tiền ngân hàng nào lãi cao nhất?</div>
+                  <div class="category-new-content newstop-sub-comment">Thêm một vài nhà băng tư nhân tăng lãi suất từ 0,1 đến 0,5 điểm phần trăm để hút khách hàng dịp Tết</div>
+                </div>
+              </div>
+              <ul class="category-more d-flex">
+                <li class="category-more-item caption col-4">'Tỷ lệ thất nghiệp toàn cầu sẽ duy trì mức cao đến 2023'</li>
+                <li class="category-more-item caption col-4">Giá vàng thế giới đi ngang</li>
+                <li class="category-more-item caption col-4">Lazada - cầu nối thương mại điện tử cho nhiều doanh nghiệp Việt</li>
+              </ul>
+            </div>
+
+            <div class="business-gold d-flex" style="border-bottom: 1px solid rgb(202, 192, 192); margin-bottom: 2rem; padding-bottom: 2rem;">
+              <img style="padding-left: 0; cursor: pointer;" class="col-5" src="./assets/images/businessgold.jpg" alt="image">
+              <table class="col-5 table-gold">
+                <tr>
+                  <th>Giá vàng <i style="margin-left: 5px; color: rgb(106, 114, 226);" class="fas fa-angle-double-right"></i></th>
+                  <th>Mua</th>
+                  <th>Bán</th>
+                </tr>
+                <tr>
+                  <td>Vàng SJC(triệu đồng/lượng)</td>
+                  <td>61,1</td>
+                  <td>61,7</td>
+                </tr>
+                <tr>
+                  <td>Thế giới(USD/ounce)</td>
+                  <td>1.816,4</td>
+                  <td>1.816,9</td>
+                </tr>
+              </table>
+              <div class="col-2">
+                <img style="cursor: pointer; margin-bottom: 5px;" src="https://s1.vnecdn.net/vnexpress/restruct/i/v522/banner/logo-startup.svg" alt="image">
+                <img style="cursor: pointer;" src="https://s1.vnecdn.net/vnexpress/restruct/i/v522/banner/logo-vhome.svg" alt="image">
+              </div>
+            </div>
+
+            <div class="sport category">
+              <ul class="category-list">
+                <li class="category-item category-firstchild caption">Thể thao</li>
+                <li class="category-item">Bóng đá</li>
+                <li class="category-item">Lịch thi đấu</li>
+                <li class="category-item">Tennis</li>
+                <li class="category-item">VM 2021</li>
+                <li class="category-item">V-Race</li>
+                <li class="category-item">AFF Cup</li>
+              </ul>
+              <div class="category-content">
+                <img src="./assets/images/categorysport.jpg" alt="image" class="category-img">
+                <div class="category-new-left">
+                  <div class="category-new-title newstop-sub-caption caption">CĐV bức xúc vì Salah vắng mặt trong Đội hình FIFA</div>
+                  <div class="category-new-content newstop-sub-comment">FIFA bị chỉ trích thiếu tôn trọng Mohamed Salah khi không đưa anh vào Đội hình tiêu biểu FIFPro World 11 năm 2021.</div>
+                </div>
+                <div class="category-new-right">
+                  <div class="category-new-title newstop-sub-caption caption">HLV Park bầu giải The Best cho Mbappe</div>
+                  <div class="category-new-content newstop-sub-comment">Trong lá phiếu bình chọn gửi FIFA, HLV Park Hang-seo lần lượt bầu cho Mbappe, Messi và Salah</div>
+                </div>
+              </div>
+              <ul class="category-more d-flex">
+                <li class="category-more-item caption col-4">Fernandes từ chối đề nghị gia hạn của Man Utd</li>
+                <li class="category-more-item caption col-4">Milan thua ngược ở phút bù giờ thứ sáu</li>
+                <li class="category-more-item caption col-4">Tuchel: 'Thay đổi vì Lukaku là sai lầm'</li>
+              </ul>
+            </div>
+
+            <div class="sport-match">
+              <div class="match-item">
+                <div class="match-date">Ngày mai, 03:00</div>
+                <div class="match-team">
+                  <img src="./assets/images/teambrighton.png" alt="image">
+                  <span>Brighton</span>
+                </div>
+                <div class="match-team">
+                  <img src="./assets/images/teamchelsea.png" alt="image">
+                  <span>Chelsea</span>
+                </div>
+              </div>
+              <div class="match-item">
+                <div class="match-date">Thứ năm, 20/1, 03:00</div>
+                <div class="match-team">
+                  <img src="./assets/images/teambrentford.png" alt="image">
+                  <span>Brentford</span>
+                </div>
+                <div class="match-team">
+                  <img src="./assets/images/teammu.png" alt="image">
+                  <span>Man utd</span>
+                </div>
+              </div>
+              <div class="match-item">
+                <div class="match-date">Thứ bảy, 22/1, 22:00</div>
+                <div class="match-team">
+                  <img src="./assets/images/teammu.png" alt="image">
+                  <span>Man utd</span>
+                </div>
+                <div class="match-team">
+                  <img src="./assets/images/teamwestham.png" alt="image">
+                  <span>West Ham</span>
+                </div>
+              </div>
+              <div class="match-item end">
+                <div class="match-date"><span>KT</span><span>Hôm nay</span></div>
+                <div class="match-team">
+                  <img src="./assets/images/teamacm.png" alt="image">
+                  <span>AC Milan</span>
+                  <p>1</p>
+                </div>
+                <div class="match-team">
+                  <img src="./assets/images/teamspezia.png" alt="image">
+                  <span>Spezia</span>
+                  <p>2</p>
+                </div>
+              </div>
+              <div class="match-item end">
+                <div class="match-date"><span>KT</span><span>Hôm qua</span></div>
+                <div class="match-team">
+                  <img src="./assets/images/teamatalanta.png" alt="image">
+                  <span>Atalanta</span>
+                  <p>0</p>
+                </div>
+                <div class="match-team">
+                  <img src="./assets/images/teaminter.png" alt="image">
+                  <span>Inter</span>
+                  <p>0</p>
+                </div>
+              </div>
+              <div class="match-item end">
+                <div class="match-date"><span>KT</span><span>16/1</span></div>
+                <div class="match-team">
+                  <img src="./assets/images/teamliverpool.png" alt="image">
+                  <span>Liverpoolv</span>
+                  <p>3</p>
+                </div>
+                <div class="match-team">
+                  <img src="./assets/images/teambrentford.png" alt="image">
+                  <span>Brentford</span>
+                  <p>0</p>
+                </div>
+              </div>
+              <div class="match-item end">
+                <div class="match-date"><span>KT</span><span>16/1</span></div>
+                <div class="match-team">
+                  <img src="./assets/images/teampsg.png" alt="image">
+                  <span>Brest</span>
+                  <p>2</p>
+                </div>
+                <div class="match-team">
+                  <img src="./assets/images/teambreast.png" alt="image">
+                  <span>Brest</span>
+                  <p>0</p>
+                </div>
+              </div>
+              <div class="match-item end">
+                <button>Xem tất cả<i class="fas fa-angle-right"></i></button>
+              </div>
+            </div>
+
+            <div class="entertain category">
+              <ul class="category-list">
+                <li class="category-item category-firstchild caption">Giải trí</li>
+                <li class="category-item">Giới sao</li>
+                <li class="category-item">Phim</li>
+                <li class="category-item">Nhạc</li>
+                <li class="category-item">Thời trang</li>
+                <li class="category-item">Sách</li>
+              </ul>
+              <div class="category-content">
+                <img src="./assets/images/categoryentertain.jpg" alt="image" class="category-img">
+                <div class="category-new-left">
+                  <div class="category-new-title newstop-sub-caption caption">Từ Hy Viên tìm bình yên sau ly dị</div>
+                  <div class="category-new-content newstop-sub-comment">Quản lý của diễn viên Từ Hy Viên cho biết cô cần thời gian chữa lành tâm hồn, chưa muốn quay lại công việc.</div>
+                </div>
+                <div class="category-new-right">
+                  <div class="category-new-title newstop-sub-caption caption">Cuộc biểu tình của Châu Nhuận Phát, Thành Long</div>
+                  <div class="category-new-content newstop-sub-comment">Châu Nhuận Phát, Thành Long... biểu tình phản đối xã hội đen uy hiếp nghệ sĩ bằng đao, súng, tháng 1/1992.</div>
+                </div>
+              </div>
+              <ul class="category-more d-flex">
+                <li class="category-more-item caption col-4">Trương Quỳnh Anh chuộng phong cách ngọt ngào tuổi 33</li>
+                <li class="category-more-item caption col-4">Jim Carey đón tuổi 60</li>
+                <li class="category-more-item caption col-4">Olivia Culpo nghỉ dưỡng cùng bạn trai</li>
+              </ul>
+            </div>
+
+            <div class="health category">
+              <ul class="category-list">
+                <li class="category-item category-firstchild caption">Sức khỏe</li>
+                <li class="category-item">Tin tức</li>
+                <li class="category-item">Dinh dưỡng</li>
+                <li class="category-item">Khỏe đẹp</li>
+                <li class="category-item">Các bệnh</li>
+                <li class="category-item">Vaccine</li>
+              </ul>
+              <div class="category-content">
+                <img src="./assets/images/categoryhealth.jpg" alt="image" class="category-img">
+                <div class="category-new-left">
+                  <div class="category-new-title newstop-sub-caption caption">Sửa trái tim bị đảo ngược cho bé 10 ngày tuổi</div>
+                  <div class="category-new-content newstop-sub-comment">Khi thai nhi được hơn 20 tuần tuổi, bác sĩ Bệnh viện Đại học Y Dược TP HCM phát hiện bị chuyển vị đại động mạch - một dị tật tim bẩm sinh</div>
+                </div>
+                <div class="category-new-right">
+                  <div class="category-new-title newstop-sub-caption caption">Bộ Y tế: Tốt nhất không bắn pháo hoa giao thừa</div>
+                  <div class="category-new-content newstop-sub-comment">Bộ Y tế đề nghị các địa phương tốt nhất không bắn pháo hoa, nếu tổ chức phải đảm bảo 5K, không tập</div>
+                </div>
+              </div>
+              <ul class="category-more d-flex">
+                <li class="category-more-item caption col-4">'Tóc rụng cả nắm hậu Covid xử trí như thế nào</li>
+                <li class="category-more-item caption col-4">30.000 liều thuốc molnupiravir đã được Hà Nội phát cho F0</li>
+                <li class="category-more-item caption col-4">Kịch bản TP HCM chống dịch dịp Tết</li>
+              </ul>
+            </div>
+
+            <div class="life category">
+              <ul class="category-list">
+                <li class="category-item category-firstchild caption">Đời sống</li>
+                <li class="category-item">Bài học sống</li>
+                <li class="category-item">Tổ ấm</li>
+                <li class="category-item">Nhà</li>
+                <li class="category-item">Tiêu dùng</li>
+                <li class="category-item">
+                  <img style="width: 70px;" src="https://s1.vnecdn.net/vnexpress/restruct/i/v522/cooking/pc/graphics/e-cooking.svg" alt="image">
+                </li>
+              </ul>
+              <div class="category-content">
+                <div class="category-wrap">
+                  <h3 class="category-img caption">Lấy được chồng nhờ mắc kẹt Covid-19</h3>
+                  <div class="category-new-left">
+                    <div class="category-new-content newstop-sub-caption">TRUNG QUỐC - Lần thứ hai gặp nhau, Hiểu Thanh, cô gái đến từ thành phố Bảo Kê bị mắc kẹt tại nhà bạn trai mới quen, do bị phong tỏa. </div>
+                  </div>
+                </div>
+                <div class="category-new-right">
+                  <div class="category-new-title newstop-sub-caption caption">'Lột xác' không gian nội thất bằng gạch thô</div>
+                  <div class="category-new-content newstop-sub-comment">Gạch thô đem tới cảm giác mộc mạc. Nó không chỉ phù hợp với phong cách công nghiệp mà có thể đi cùng nhiều kiểu nội thất khác nhau.</div>
+                </div>
+              </div>
+              <ul class="category-more d-flex">
+                <li class="category-more-item caption col-4">Cuộc hôn nhân lâu nhất nước Anh</li>
+                <li class="category-more-item caption col-4">Đường về nhà như mua vé số</li>
+                <li class="category-more-item caption col-4">Kiến trúc sư 'bán tuổi thơ' qua tiểu cảnh</li>
+              </ul>
+            </div>
+
+            <div class="science category">
+              <ul class="category-list">
+                <li class="category-item category-firstchild caption">Khoa học</li>
+                <li class="category-item">Trong nước</li>
+                <li class="category-item">Phát minh</li>
+                <li class="category-item">Ứng dụng</li>
+                <li class="category-item">Thế giới tự nhiên</li>
+                <li class="category-item">Thường thức</li>
+                <li class="category-item">AI4VN</li>
+              </ul>
+              <div class="category-content">
+                <img src="./assets/images/categoryscience.jpg" alt="image" class="category-img">
+                <div class="category-new-left">
+                  <div class="category-new-title newstop-sub-caption caption">GS Đặng Văn Chí: 'VinFuture tìm kiếm nghiên cứu có ảnh hưởng hàng triệu người''</div>
+                  <div class="category-new-content newstop-sub-comment">GS Đặng Văn Chí, thành viên hội đồng Giải thưởng cho biết, VinFuture hướng đến</div>
+                </div>
+                <div class="category-new-right">
+                  <div class="category-new-title newstop-sub-caption caption">Scotland nhận đầu tư gần tỷ đô vào điện gió ngoài khơi</div>
+                  <div class="category-new-content newstop-sub-comment">Scotland đang đẩy mạnh phát triển các dự án điện gió ngoài khơi để hiện thực hóa mục tiêu trung hòa</div>
+                </div>
+              </div>
+              <ul class="category-more d-flex">
+                <li class="category-more-item caption col-4">'Hoa băng' phủ trắng mặt hồ Bosten</li>
+                <li class="category-more-item caption col-4">Động vật lai tạo sớm nhất lịch sử</li>
+                <li class="category-more-item caption col-4">Ra mắt thịt cá hồi nhân tạo từ thực vật</li>
+              </ul>
+            </div>
+
+            <div class="education category">
+              <ul class="category-list">
+                <li class="category-item category-firstchild caption">Giáo dục</li>
+                <li class="category-item">Tin tức</li>
+                <li class="category-item">Tuyển sinh</li>
+                <li class="category-item">Chân dung</li>
+                <li class="category-item">Du học</li>
+                <li class="category-item">Học tiếng Anh</li>
+                <li class="category-item">Trắc nghiệm</li>
+                <li class="category-item">Giáo dục 4.0</li>
+              </ul>
+              <div class="category-content">
+                <div class="category-wrap">
+                  <h3 class="category-img caption">Đại học Điện lực dành gần 1.000 chỉ tiêu xét học bạ</h3>
+                  <div class="category-new-left">
+                    <div class="category-new-content newstop-sub-comment">Hà Nội - Đại học Điện lực sử dụng bốn phương thức để xét tuyển 3.330 chỉ tiêu năm 2022, trong đó hai phương thức chính là xét học bạ và dựa vào kết quả thi tốt nghiệp THPT.</div>
+                  </div>
+                </div>
+                <div class="category-new-right">
+                  <div class="category-new-title newstop-sub-caption caption">Phụ huynh tất tả đưa đón con</div>
+                  <div class="category-new-content newstop-sub-comment">Từ khi con gái - lớp 8 THCS Linh Trung, TP Thủ Đức - học trực tiếp, anh Đức Huy xin công ty làm việc online buổi sáng để thuận tiện đón con vì trường chưa mở bán trú.</div>
+                </div>
+              </div>
+              <ul class="category-more d-flex">
+                <li class="category-more-item caption col-4">Bị đình chỉ dạy vì gọi sinh viên là 'trung gian truyền bệnh'</li>
+                <li class="category-more-item caption col-4">Trường nghề thiếu học viên</li>
+                <li class="category-more-item caption col-4">Cách bảo vệ môi trường qua lăng kính trẻ nhỏ</li>
+              </ul>
+            </div>
+            
           </div>
         </section>
       </div>

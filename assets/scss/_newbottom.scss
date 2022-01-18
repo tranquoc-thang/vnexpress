@@ -66,16 +66,172 @@
       font-weight: 700;
     }
     &-vaccine {
-      @include flex(center, space-between);
+      @include flex(center, flex-end);
+      width: 270px;
     }
   }
+  &-bottom {
+    @include flex(center, space-between);
+    margin: 15px 0 10px;
+    font-size: 1.4rem;
+    color: $color-text-light;
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 15px;
+  }
+  &-action {
+    @include flex();
+    & a {
+      color: $color-text-hover;
+      text-decoration: underline;
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+  &-slider {
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    @include flex();
+    &-list {
+      @include flex(center, space-around);
+      height: 34px;
+      overflow: auto;
+    }
+    &-list::-webkit-scrollbar {
+      display: none;
+    }
+    &-item {
+      font-size: 1.4rem;
+      color: $color-text-hover;
+      text-decoration: underline;
+      white-space: nowrap;
+      margin: 0 15px;
+    }
+    &-sick,
+    &-question {
+      @include flex(center, center);
+      white-space: nowrap;
+      padding: 10px;
+      background-color: #e6f4f9;
+      font-size: 1.4rem;
+      border-radius: 0.2rem;
+      & i {
+        color: $color-text-hover;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.statistic {
+  &-left {
+    border-right: 1px solid $color-border;
+    padding: 0;
+    padding-right: 20px;
+    &-title {
+      padding: 0;
+      text-align: right;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      font-weight: 300;
+      & div {
+        padding: 0;
+      }
+    }
+  }
+  &-infection,
+  &-serious,
+  &-death {
+    white-space: nowrap;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    & div {
+      padding: 0;
+      &:first-child {
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        font-family: "Merriweather", serif;
+        text-align: right;
+      }
+    }
+  }
+  &-infection div:not(:nth-child(1)) {
+    color: #ff392b;
+  }
+  &-serious div:not(:nth-child(1)) {
+    color: #8a1839;
+  }
+  &-death div:not(:nth-child(1)) {
+    color: #222228;
+  }
+  &-right {
+    height: 120px;
+    overflow: auto;
+    &-title {
+      padding: 0;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      & span {
+        padding: 0;
+      }
+      & span:not(:first-child) {
+        text-align: right;
+      }
+    }
+    &-heading {
+      white-space: nowrap;
+    }
+    &-heading--infection {
+      padding-right: 10px !important;
+    }
+    &-item {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      & span {
+        padding: 0;
+        &:nth-child(2) {
+          font-weight: 600;
+          padding-right: 10px;
+
+          text-align: right;
+        }
+        &:nth-child(3) {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.vaccine {
+  &-title {
+    font-size: 1.4rem;
+    color: #00945e;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  &-progress {
+    background-color: #00945e;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
+
+.progress-vaccine {
+  height: 20px;
 }
 
 .slick-arrow {
   position: absolute;
   padding: 12px;
-  border: 0;
-  outline: 0;
+  border: none !important;
+  outline: none !important;
   border-radius: 50%;
   background-color: $color-background;
   box-shadow: 0 0 20px 20px #fff;
@@ -84,8 +240,28 @@
 
 .slick-prev {
   left: 0;
+  top: 0;
 }
 
 .slick-next {
   right: 0;
+  top: 0;
+}
+
+.slick-arrow-slider {
+  padding: 8px;
+  border-radius: 50%;
+  background-color: $color-gray-light;
+  box-shadow: none;
+  color: #fff;
+  border: none !important;
+  outline: none !important;
+}
+
+.slick-prev-slider {
+  right: 30px;
+}
+
+.slick-next-slider {
+  right: 5px;
 }
