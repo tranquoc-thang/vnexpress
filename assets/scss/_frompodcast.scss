@@ -9,7 +9,7 @@
     @include flex(flex-start, space-between, row-reverse);
     border-right: 1px solid $color-border;
     border-bottom: 0;
-    &:first-child div{
+    &:first-child div {
       padding-left: 0;
     }
     &:last-child {
@@ -48,7 +48,7 @@
 }
 
 .category-news-left {
-  padding-left: 0!important;
+  padding-left: 0 !important;
 }
 
 .news {
@@ -87,7 +87,6 @@
 }
 
 // Travel
-
 
 .travel {
   &-wrapper {
@@ -146,7 +145,7 @@
   &-new {
     &-left {
       width: 100%;
-      padding-left: 0!important;
+      padding-left: 0 !important;
     }
   }
 }
@@ -154,7 +153,7 @@
 .car {
   &-content {
     @include flex(flex-start, flex-start, column);
-    background-color:#d6edfa;
+    background-color: #d6edfa;
     padding: 8px;
     position: relative;
     overflow: hidden;
@@ -163,7 +162,7 @@
       position: absolute;
       bottom: 70%;
       left: 30%;
-      background: url('../images/car6.png') no-repeat;
+      background: url("../images/car6.png") no-repeat;
       width: 70%;
       height: 70%;
     }
@@ -180,14 +179,14 @@
     margin-bottom: 10px;
   }
   &-search {
-    padding-left: 0!important;
+    padding-left: 0 !important;
     @include flex(center, flex-start);
     overflow: hidden;
     width: 100%;
     height: 33px;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     &-input {
-      background-color:#fff;
+      background-color: #fff;
       border: none;
       outline: none;
       padding: 12px;
@@ -195,11 +194,11 @@
       color: $color-text-light;
     }
     &-btn {
-      background-color:#fff;
+      background-color: #fff;
       border: none;
       outline: none;
       padding: 12px;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       overflow: hidden;
       & i {
         font-size: 1.4rem;
