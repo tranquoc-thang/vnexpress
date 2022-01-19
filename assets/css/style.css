@@ -1097,6 +1097,7 @@ ul {
   border-left: none !important;
   width: 100%;
 }
+
 .category-three {
   display: flex;
   align-items: flex-start;
@@ -1372,6 +1373,7 @@ ul {
 
 .selling-box {
   border: 1px solid #e5e5e5;
+  margin-left: 15px;
 }
 .selling-title {
   background-color: #f7f7f7;
@@ -1395,13 +1397,15 @@ ul {
 }
 .selling-item {
   font-size: 1.2rem;
-  margin: 10px 10px 10px 0;
+  margin: 10px 10px 10px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   flex-wrap: nowrap;
+  display: flex !important;
   background-color: #f7f7f7;
+  padding: 5px;
 }
 .selling-avatar {
   width: 100px;

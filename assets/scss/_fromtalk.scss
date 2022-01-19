@@ -75,6 +75,7 @@
 .selling {
   &-box {
     border: 1px solid $color-border;
+    margin-left: 15px;
   }
   &-title {
     background-color: $color-background-second;
@@ -90,9 +91,11 @@
   }
   &-item {
     font-size: 1.2rem;
-    margin: 10px 10px 10px 0;
+    margin: 10px 10px 10px 10px;
     @include flex(center, center, column);
+    display: flex !important;
     background-color: $color-background-second;
+    padding: 5px;
   }
   &-avatar {
     width: 100px;

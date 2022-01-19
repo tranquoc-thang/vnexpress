@@ -485,14 +485,18 @@ const app = {
       return `
         <li class="statistic-right-item d-flex">
           <span class="col-4 statistic-right-province">${value.province}</span>
-          <span class="col-4 statistic-right-infection">+${value.inflectionToday || '-'}</span>
-          <span class="col-4 statistic-right-death">${value.deathToday || '-'}</span>
+          <span class="col-4 statistic-right-infection">+${
+            value.inflectionToday || "-"
+          }</span>
+          <span class="col-4 statistic-right-death">${
+            value.deathToday || "-"
+          }</span>
         </li>
       `;
-    })
-    statisticRightList.innerHTML = htmls.join("")
+    });
+    statisticRightList.innerHTML = htmls.join("");
   },
-  slickSlider: function() {
+  slickSlider: function () {
     $(document).ready(function () {
       $("#chart-heading-list").slick({
         slidesToShow: 6,
