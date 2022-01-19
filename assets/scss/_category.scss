@@ -1,4 +1,6 @@
 .category {
+  margin-bottom: 15px;
+  margin-top: 10px;
   &-list {
     @include flex(center, flex-start);
   }
@@ -23,7 +25,7 @@
     @include flex();
     padding-bottom: 15px;
     border-bottom: 1px solid $color-border;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
     & > * {
       width: calc(100% / 3);
       margin-right: 15px;
@@ -37,7 +39,7 @@
   &-new {
     &-title {
       font-weight: 600;
-      margin-bottom: 5px;
+      margin-bottom: 12px;
     }
     &-content {
       line-height: 1.4;
@@ -104,25 +106,33 @@
 
 .sport-match {
   @include flex();
+  margin: 15px 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(202, 192, 192);
 }
 
 .match {
   &-date {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    color: $color-text-light;
   }
   &-item {
     border: 1px solid $color-border;
-    padding: 5px;
+    padding: 8px 8px 4px;
     min-width: 140px;
     @include flex(flex-start, center, column);
+    &:hover {
+      background-color: $color-background-second;
+      cursor: pointer;
+    }
   }
   &-team {
     @include flex(center, space-between);
-    margin-bottom: 5px;
-    &:last-child {
-    }
+    font-size: 1.2rem;
+    margin-bottom: 6px;
     & img {
       width: 14px;
+      margin-right: 4px;
     }
     & span {
       white-space: nowrap;
@@ -130,8 +140,157 @@
   }
   &-item.end {
     background-color: $color-background-second;
-    & .match-team {
+    & > .match-date {
+      width: 100%;
+      @include flex(flex-start, space-between);
+    }
+    & > .match-team {
+      width: 100%;
+      height: 14px;
+      @include flex(center);
+      &:last-child {
+        margin-left: auto;
+      }
+      & p {
+        margin-bottom: 0;
+        margin-left: auto;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.match-item-lastchild {
+  @include flex(center, center);
+  display: flex !important;
+  height: 74px;
+  background-color: #fff;
+}
+
+.btn-match {
+  border: none;
+  outline: none;
+  @include flex(center, center);
+  padding: 8px 12px;
+  border-radius: 0.2rem;
+  font-size: 1.4rem;
+  background-color: $color-background-second;
+  &:hover {
+    background-color: $color-border;
+  }
+  & i {
+    margin-left: 8px;
+  }
+}
+
+.slick-prev-match {
+  top: 0;
+  left: 0;
+}
+
+.slick-next-match {
+  top: 0;
+  right: 0;
+}
+
+.slick-arrow-match {
+  border-radius: 0;
+  height: 74px;
+  width: 30px;
+  padding: 8px;
+  background-color: $color-background;
+  box-shadow: none;
+  color: $color-text;
+  outline: none !important;
+  border: 1px solid $color-border !important;
+}
+
+.health {
+  &-box {
+    padding: 15px 15px 20px;
+    border: 1px solid $color-border;
+    @include flex(flex-start, space-between);
+    &-line {
+      width: 100%;
+      border-bottom: 1px solid $color-border;
+      margin: 20px 0 15px;
+    }
+  }
+  &-question {
+    padding-right: 2rem;
+    width: 55%;
+    &-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      background-color: $color-blue;
+      color: #fff;
+      padding: 8px 6px;
+      margin-bottom: 10px;
+    }
+    &-content {
+      line-height: 1.5;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      & span {
+        cursor: pointer;
+        font-style: italic;
+      }
+    }
+    &-submit {
+      padding: 10px 12px;
+      border: none;
+      outline: none;
+      background-color: $color-blue;
+      color: #fff;
+      font-size: 1.4rem;
+      margin-right: 15px;
+    }
+    &-date {
+      font-weight: 600;
+      color: #000;
+      font-size: 1.4rem;
+    }
+  }
+  &-doctor {
+    &-label {
+      font-size: 1.4rem;
+      padding: 6px 8px;
+      background-color: $color-background-second;
+      position: relative;
+      max-width: 160px;
+      margin-bottom: 10px;
+      &::after {
+        content: "";
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-color: $color-background-second;
+        border-width: 13px;
+        border-style: solid;
+        border-color: $color-background $color-background $color-background $color-background-second;
+      }
+    }
+    &-slider {
+      width: 45%;
+    }
+    &-list {
       @include flex(center, space-between);
+    }
+    &-wrap {
+      @include flex();
+    }
+    &-image {
+      width: 100px;
+      border: 1px solid $color-border;
+      margin-right: 8px;
+    }
+    &-name {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+    &-desc {
+      font-size: 1.4rem;
+      line-height: 1.3;
     }
   }
 }

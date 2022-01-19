@@ -401,7 +401,7 @@
               </ul>
             </div>
 
-            <div class="sport-match">
+            <div class="sport-match" id="sport-match">
               <div class="match-item">
                 <div class="match-date">Ngày mai, 03:00</div>
                 <div class="match-team">
@@ -478,7 +478,7 @@
                 <div class="match-date"><span>KT</span><span>16/1</span></div>
                 <div class="match-team">
                   <img src="./assets/images/teampsg.png" alt="image">
-                  <span>Brest</span>
+                  <span>PSG</span>
                   <p>2</p>
                 </div>
                 <div class="match-team">
@@ -487,8 +487,8 @@
                   <p>0</p>
                 </div>
               </div>
-              <div class="match-item end">
-                <button>Xem tất cả<i class="fas fa-angle-right"></i></button>
+              <div class="match-item end match-item-lastchild">
+                <button class="btn-match">Xem tất cả<i class="fas fa-angle-right"></i></button>
               </div>
             </div>
 
@@ -546,6 +546,78 @@
               </ul>
             </div>
 
+            <div class="health-box">
+              <div class="health-question">
+                <div class="health-question-title">Điều trị hiếm muộn thành công, sinh con khỏe mạnh</div>
+                <p class="health-question-content">10 năm rồi, vợ chồng em chữa khắp nơi, đã làm IVF thất bại 2 lần. Vợ chồng em tiếp tục đi làm IVF thêm một lần... <span>Xem thêm</span></p>
+                <div class="health-question-action">
+                  <button class="health-question-submit">Gửi câu hỏi <i class="fas fa-angle-double-right"></i></button>
+                  <span class="health-question-date">Còn 6 ngày</sp>
+                </div>
+              </div>
+              <div class="health-doctor-slider">
+                <div class="health-doctor-label">Chuyên gia tư vấn</div>
+                <ul class="health-doctor-list" id="health-doctor-list">
+                <li class="health-doctor-item">
+                  <div class="health-doctor-wrap">
+                    <img src="./assets/images/doctor1.jpg" alt="image" class="health-doctor-image">
+                    <div class="health-doctor-info">
+                      <div class="health-doctor-name caption">TTND.PGS.TS.BS Lê Hoàng</div>
+                      <div class="health-doctor-desc">GĐ Trung tâm Hỗ trợ sinh sản BVĐK Tâm Anh Hà Nội</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="health-doctor-item">
+                  <div class="health-doctor-wrap">
+                    <img src="./assets/images/doctor2.jpg" alt="image" class="health-doctor-image">
+                    <div class="health-doctor-info">
+                      <div class="health-doctor-name caption">ThS.BS Giang Huỳnh Như</div>
+                      <div class="health-doctor-desc">Giám đốc Trung tâm Hỗ trợ sinh sản BVĐK Tâm Anh TP.HCM</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="health-doctor-item">
+                  <div class="health-doctor-wrap">
+                    <img src="./assets/images/doctor3.jpg" alt="image" class="health-doctor-image">
+                    <div class="health-doctor-info">
+                      <div class="health-doctor-name caption">BS.CKI Châu Hoàng Phương Thảo</div>
+                      <div class="health-doctor-desc">PGĐ Trung tâm Hỗ trợ sinh sản, BVĐK Tâm Anh, TPHCM</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="health-doctor-item">
+                  <div class="health-doctor-wrap">
+                    <img src="./assets/images/doctor4.jpg" alt="image" class="health-doctor-image">
+                    <div class="health-doctor-info">
+                      <div class="health-doctor-name caption">ThS.BS Lê Đăng Khoa</div>
+                      <div class="health-doctor-desc">Trưởng đơn vị nam học, Trung tâm Hỗ trợ sinh sản, BVĐK Tâm Anh TP.HCM</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="health-doctor-item">
+                  <div class="health-doctor-wrap">
+                    <img src="./assets/images/doctor5.jpg" alt="image" class="health-doctor-image">
+                    <div class="health-doctor-info">
+                      <div class="health-doctor-name caption">BS.CKI Phan Ngọc Quý</div>
+                      <div class="health-doctor-desc">Bác sĩ Trung tâm Hỗ trợ sinh sản BVĐK Tâm Anh Hà Nội</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="health-doctor-item">
+                  <div class="health-doctor-wrap">
+                    <img src="./assets/images/doctor6.jpg" alt="image" class="health-doctor-image">
+                    <div class="health-doctor-info">
+                      <div class="health-doctor-name caption">BS.CKI Cao Tuấn Anh</div>
+                      <div class="health-doctor-desc">Bác sĩ Trung tâm Hỗ trợ sinh sản BVĐK Tâm Anh Hà Nội</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              </div>
+            </div>
+
+            <div class="health-box-line"></div>
+
             <div class="life category">
               <ul class="category-list">
                 <li class="category-item category-firstchild caption">Đời sống</li>
@@ -559,7 +631,7 @@
               </ul>
               <div class="category-content">
                 <div class="category-wrap">
-                  <h3 class="category-img caption">Lấy được chồng nhờ mắc kẹt Covid-19</h3>
+                  <h3 class="category-img caption" style="cursor: pointer;">Lấy được chồng nhờ mắc kẹt Covid-19</h3>
                   <div class="category-new-left">
                     <div class="category-new-content newstop-sub-caption">TRUNG QUỐC - Lần thứ hai gặp nhau, Hiểu Thanh, cô gái đến từ thành phố Bảo Kê bị mắc kẹt tại nhà bạn trai mới quen, do bị phong tỏa. </div>
                   </div>
@@ -617,7 +689,7 @@
               </ul>
               <div class="category-content">
                 <div class="category-wrap">
-                  <h3 class="category-img caption">Đại học Điện lực dành gần 1.000 chỉ tiêu xét học bạ</h3>
+                  <h3 class="category-img caption" style="cursor: pointer;">Đại học Điện lực dành gần 1.000 chỉ tiêu xét học bạ</h3>
                   <div class="category-new-left">
                     <div class="category-new-content newstop-sub-comment">Hà Nội - Đại học Điện lực sử dụng bốn phương thức để xét tuyển 3.330 chỉ tiêu năm 2022, trong đó hai phương thức chính là xét học bạ và dựa vào kết quả thi tốt nghiệp THPT.</div>
                   </div>
@@ -628,14 +700,628 @@
                 </div>
               </div>
               <ul class="category-more d-flex">
-                <li class="category-more-item caption col-4">Bị đình chỉ dạy vì gọi sinh viên là 'trung gian truyền bệnh'</li>
-                <li class="category-more-item caption col-4">Trường nghề thiếu học viên</li>
-                <li class="category-more-item caption col-4">Cách bảo vệ môi trường qua lăng kính trẻ nhỏ</li>
+                <li class="category-more-item caption col-4" style="border-bottom: none !important;">Bị đình chỉ dạy vì gọi sinh viên là 'trung gian truyền bệnh'</li>
+                <li class="category-more-item caption col-4" style="border-bottom: none !important;">Trường nghề thiếu học viên</li>
+                <li class="category-more-item caption col-4" style="border-bottom: none !important;">Cách bảo vệ môi trường qua lăng kính trẻ nhỏ</li>
               </ul>
             </div>
             
           </div>
         </section>
+
+        <div class="slider-after-newbottom">
+          <div class="slider-after-newbottom-caption">
+            <i class="fas fa-chart-line"></i>
+            <span>Chủ đề</span>
+          </div>
+          <ul class="slider-after-newbottom-list" id="slider-after-newbottom-list">
+            <a href="#" class="slider-after-newbottom-item"><span>Vụ án VN Pharma liên quan cựu thứ trưởng y tế</span></a>
+            <a href="#" class="slider-after-newbottom-item"><span>Khủng hoảng chính trị Kazakhstan</span></a>
+            <a href="#" class="slider-after-newbottom-item"><span>Kỳ họp bất thường thứ nhất, Quốc hội khóa XV</span></a>
+          </ul>
+        </div>
+
+        <div class="podcast category">
+          <ul class="category-list">
+            <li class="category-item category-firstchild caption">Nghe podcast</li>
+          </ul>
+          <div class="podcast-wrap">
+            <div class="category-content podcast-content">
+              <img src="./assets/images/podcast1.jpg" alt="image" class="category-img podcast-img">
+              <div class="category-new-left podcast-new-left">
+                <div class="category-new-title newstop-sub-caption podcast-new-title caption">Điểm tin: Chủ tịch FLC bị phạt 1,5 tỷ đồng; Chứng khoán tiếp tục bị bán tháo</div>
+                <div class="category-new-content newstop-sub-comment podcast-new-content">TPHCM đưa ra kế hoạch học trực tiếp sau Tết; Thưởng Tết Nhâm Dần giảm; Chủ tịch FLC bị phạt 1,5 tỷ...</div>
+              </div>
+            </div>
+            <div class="category-content podcast-content">
+              <img src="./assets/images/podcast2.jpg" alt="image" class="category-img podcast-img">
+              <div class="category-new-left podcast-new-left">
+                <div class="category-new-title newstop-sub-caption podcast-new-title caption">Lao động tự do khó khăn tiếp cận gói hỗ trợ</div>
+                <div class="category-new-content newstop-sub-comment podcast-new-content">4 lần đăng ký, chạy vạy xếp hàng trên phường lẫn khu phố để xin trợ cấp vì mất việc suốt 1 năm, chị...</div>
+              </div>
+            </div>
+            <div class="category-content podcast-content">
+              <img src="./assets/images/podcast3.jpg" alt="image" class="category-img podcast-img">
+              <div class="category-new-left podcast-new-left">
+                <div class="category-new-title newstop-sub-caption podcast-new-title caption">Sợ 'mất tết' vì cách ly</div>
+                <div class="category-new-content newstop-sub-comment podcast-new-content">Tiêm đủ 3 mũi, chạy vạy xét nghiệm âm tính, chị Nga vẫn được cán bộ xã tại Vĩnh Phúc yêu cầu cách ly...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-three">
+          <div class="news category-one">
+            <ul class="category-list">
+              <li class="category-item category-firstchild caption">Thời sự</li>
+              <li class="category-item">Chính trị</li>
+              <li class="category-item">Dân sinh</li>
+              <li class="category-item">Giao thông</li>
+            </ul>
+            <div class="news-wrap">
+              <div class="category-content news-content">
+                <div class="category-wrap news-wrap">
+                  <h3 class="category-img caption" style="cursor: pointer;">Hộ dân bị khóa cổng 7 ngày vì về từ 'vùng đỏ'</h3>
+                  <div class="category-new-left category-news-left">
+                    <div class="category-new-content newstop-sub-comment">THÁI BÌNH - Một hộ dân ở xã Nam Cao (huyện Kiến Xương) bị thôn khóa cửa từ bên ngoài với lý do gia đình có người thân trở về từ "vùng đỏ".</div>
+                  </div>
+                </div>
+              </div>
+              <div class="category-content news-content">
+                <div class="category-new-left news-new-left">
+                  <div class="category-new-title newstop-sub-caption news-new-title caption">TP HCM tiếp tục kiến nghị tăng tỷ lệ điều tiết ngân sách</div>
+                  <div class="category-new-content newstop-sub-comment news-new-content">Giai đoạn 2023-2026, TP HCM trình Quốc hội xem xét tăng tỷ lệ điều tiết ngân sách với hai phương án giữ nguyên 21% hoặc lên 23-25%.</div>
+                </div>
+              </div>
+              <div class="category-content news-content">
+                <div class="category-new-left news-new-left">
+                  <div class="category-new-title newstop-sub-caption news-new-title caption">Hồ thủy điện Yaly nổi váng, bốc mùi thối</div>
+                  <div class="category-new-content newstop-sub-comment news-new-content">KON TUM - Nhiều tháng qua, mặt nước lòng hồ thuỷ điện Yaly, huyện Sa Thầy, nổi váng, bốc mùi hôi thối ảnh hưởng nhiều người dân sống xung quanh.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news category-one">
+            <ul class="category-list">
+              <li class="category-item category-firstchild caption">Thế giới</li>
+              <li class="category-item">Tư liệu</li>
+              <li class="category-item">Phân tích</li>
+            </ul>
+            <div class="news-wrap">
+              <div class="category-content news-content">
+                <img src="./assets/images/world.jpg" alt="image" class="category-img world-img">
+                <div class="category-new-left news-new-left">
+                  <div class="category-new-title newstop-sub-caption news-new-title caption">Indonesia thông qua luật dời đô</div>
+                  <div class="category-new-content newstop-sub-comment news-new-content">Quốc hội Indonesia phê chuẩn luật dời thủ đô từ Jakarta đến thành phố mới có tên Nusantara, bước tiến lớn trong kế hoạch đầy tham vọng của chính phủ.</div>
+                </div>
+              </div>
+              <div class="category-content news-content world-content">
+                <div class="category-new-left news-new-left">
+                  <div class="category-new-title newstop-sub-caption world-new-title caption">Hong Kong tiêu hủy 2.000 chuột hamster vì lo ngại Covid-19</div>
+                  <div class="category-new-content newstop-sub-comment world-new-content">Hong Kong yêu cầu các cửa hàng và người nuôi chuột hamster giao nộp khoảng 2.000 con để tiêu hủy, do nghi ngờ nCoV truyền từ loài này sang người.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news category-one">
+            <ul class="category-list">
+              <li class="category-item category-firstchild caption">Pháp luật</li>
+              <li class="category-item">Hồ sơ phá án</li>
+              <li class="category-item">Tư vấn</li>
+            </ul>
+            <div class="news-wrap">
+              <div class="category-content news-content">
+                <img src="./assets/images/law.jpg" alt="image" class="category-img travel-img">
+                <div class="category-new-left news-new-left">
+                  <div class="category-new-title newstop-sub-caption news-new-title caption">Viên cảnh sát tà dâm che đậy tội ác</div>
+                  <div class="category-new-content newstop-sub-comment law-new-content">MỸ - Gạ tình thiếu nữ không thành, cảnh sát Matthew Owens gây án để bịt miệng nạn nhân rồi thiêu hủy dấu vết, đánh lạc hướng điều tra.</div>
+                </div>
+              </div>
+              <div class="category-content news-content law-content">
+                <div class="category-new-left news-new-left">
+                  <div class="category-new-title newstop-sub-caption news-new-title caption">Câu đố: Suy luận tìm tên tội phạm bị truy nã</div>
+                  <div class="category-new-content newstop-sub-comment law-new-content">Bạn hãy phân tích lời khai của ba kẻ khả nghi để giúp thám tử xác định kẻ nào là tội phạm.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="travel category">
+          <ul class="category-list">
+            <li class="category-item category-firstchild caption">Du lịch</li>
+            <li class="category-item">Điểm đến</li>
+            <li class="category-item">Ẩm thực</li>
+            <li class="category-item">Dấu chân</li>
+            <li class="category-item">Tư vấn</li>
+            <li class="category-item">Ảnh</li>
+            <li class="category-item">Ăn và chơi</li>
+          </ul>
+          <div class="travel-wrapper">
+            <div class="travel-left">
+            <div class="travel-wrap">
+              <div class="category-content travel-content">
+                <img src="./assets/images/travel1.jpg" alt="image" class="category-img travel-img">
+                <div class="category-new-left travel-new-left">
+                  <div class="category-new-title newstop-sub-caption travel-new-title caption">5 điểm đến Đà Lạt dành cho trẻ nhỏ</div>
+                  <div class="category-new-content newstop-sub-comment travel-new-content">LÂM ĐỒNG - Đến Puppy Farm các bé được chơi đùa với nhiều loài thú còn ở Thị trấn Nobi bé sẽ lạc vào thế giới của mèo máy Doraemon.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="travel-center">
+            <div class="category-content travel-content">
+              <img src="./assets/images/travel2.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Ngôi nhà hình bàn xoay ở làng gốm Bát Tràng</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/travel3.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Kiến nghị mở cửa toàn bộ du lịch quốc tế từ 30/4</div>
+              </div>
+            </div>
+          </div>
+          <div class="travel-right">
+            <div class="category-content travel-content">
+              <img src="./assets/images/travel4.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Sự sáng tạo 'khó đỡ' của các nhà hàng</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/travel5.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Phố ông đồ TP HCM đông khách trước Tết</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/travel6.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Cầu Vàng Đà Nẵng được ví như cảnh phim viễn tưởng</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/travel7.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Những tour du lịch hàng trăm triệu đồng</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="car category">
+          <ul class="category-list">
+            <li class="category-item category-firstchild caption">Xe</li>
+            <li class="category-item">Thị trường</li>
+            <li class="category-item">Tư vấn</li>
+            <li class="category-item">Car Awards 2021</li>
+            <li class="category-item"><img src="https://s1.vnecdn.net/vnexpress/restruct/i/v522/graphics/ico-vcar.svg" style="display: inline-block" alt=""> V-Car</li>
+            <li class="category-item">Đánh giá</li>
+            <li class="category-item">Diễn đàn</li>
+            <li class="category-item">Bảng giá ôtô</li>
+            <li class="category-item">Xe điện</li>
+            <li class="category-item">Cẩm nang mua xe</li>
+            <li class="category-item">Thi bằng lái</li>
+            <li class="category-item">Thi bằng lái</li>
+            <li class="category-item">Mua bán</li>
+          </ul>
+          <div class="travel-wrapper">
+            <div class="travel-left">
+            <div class="travel-wrap">
+              <div class="category-content travel-content">
+                <img src="./assets/images/car1.jpg" alt="image" class="category-img travel-img">
+                <div class="category-new-left travel-new-left">
+                  <div class="category-new-title newstop-sub-caption travel-new-title caption">Những mẫu ôtô không kịp giao trước Tết</div>
+                  <div class="category-new-content newstop-sub-comment travel-new-content">Toyota Raize, Kia Sonet, Seltos là những mẫu xe không có hàng giao trước Tết âm lịch dù người mua đặt trước 2-3 tháng.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="travel-center">
+            <div class="category-content travel-content">
+              <img src="./assets/images/car2.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">'10 việc nên biết khi mua xe cũ trên 10 năm'</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/car3.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Yamaha Fazzio - xe máy hybrid giá 1.500 USD</div>
+              </div>
+            </div>
+          </div>
+          <div class="travel-right">
+            <div class="category-content car-content">
+              <div class="car-title caption">V-Car</div>
+              <div class="car-desc">Giá, thông số kỹ thuật, đánh giá chi tiết</div>
+              <div class="car-search">
+                <input type="text" placeholder="Nhập tên xe cần tìm" class="car-search-input">
+                <button class="car-search-btn"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <iframe class="category-img travel-img" style="height: 50px; overflow: hidden;" src="https://i1-vnexpress.vnecdn.net/2022/01/18/ezgif7aa25670ff3-1642475291-4846-1642477096.gif?w=120&h=72&q=100&dpr=1&fit=crop&s=REhnRzlGNV8LweiG3qrnVw&t=video" frameborder="0"></iframe>
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Voi lật ngửa ôtô chở cả gia đình</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/car4.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Kinh doanh trạm sạc ôtô điện sẽ lãi hơn bán xăng</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/car5.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">5 mẫu sedan người Việt ưa chuộng nhất 2021</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="number category">
+          <ul class="category-list">
+            <li class="category-item category-firstchild caption">Số hóa</li>
+            <li class="category-item">Công nghệ</li>
+            <li class="category-item">Sản phẩm</li>
+            <li class="category-item">Tech Awards 2021</li>
+          </ul>
+          <div class="travel-wrapper">
+            <div class="travel-left">
+            <div class="travel-wrap">
+              <div class="category-content travel-content">
+                <img src="./assets/images/number1.jpg" alt="image" class="category-img travel-img">
+                <div class="category-new-left travel-new-left">
+                  <div class="category-new-title newstop-sub-caption travel-new-title caption">Kỹ sư bảo mật Việt được Apple vinh danh</div>
+                  <div class="category-new-content newstop-sub-comment travel-new-content">Nhữ Bảo Châu, sinh năm 1997, đang làm việc tại Hà Nội đã tìm ra lỗ hổng trong máy chủ của Apple và được hãng này ghi nhận.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="travel-center">
+            <div class="category-content travel-content">
+              <img src="./assets/images/number2.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Cuộc chiến tỷ USD thống trị cáp quang biển</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/number3.png" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Vũ trụ ảo đang tạo ra việc làm thật</div>
+              </div>
+            </div>
+          </div>
+          <div class="travel-right">
+            <div class="category-content travel-content">
+              <img src="./assets/images/number4.png" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Những kẽ hở về bản quyền NFT</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/number5.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Trung Quốc hái 'quả ngọt' khi tự chủ bán dẫn</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/number6.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Game thủ nổi giận khi bị biến thành nhà đầu tư</div>
+              </div>
+            </div>
+            <div class="category-content travel-content">
+              <img src="./assets/images/number7.jpg" alt="image" class="category-img travel-img">
+              <div class="category-new-left travel-new-left">
+                <div class="category-new-title newstop-sub-caption travel-new-title caption">Apple gặp rắc rối với sạc iPhone</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="talk category">
+          <div class="talk-lefts">
+            <ul class="category-list">
+              <li class="category-item category-firstchild caption">Tâm sự</li>
+              <li class="category-item">Chuyên gia gỡ rối</li>
+              <li class="category-item">Hẹn hò</li>
+            </ul>
+            <div class="talk-wrapper">
+              <div class="talk-left">
+              <div class="talk-wrap">
+                <div class="category-content talk-content">
+                  <div class="category-new-left talk-new-left">
+                    <div class="category-new-title newstop-sub-caption talk-new-title caption">Hối hận vì từng mời người khác giới tới chơi nhà</div>
+                    <div class="category-new-content newstop-sub-comment talk-new-content">Tôi là nữ, 27 tuổi, làm văn phòng tại nước ngoài. Nửa tháng trước, tôi vô tình biết anh khi đang mua sắm, sau đó trò chuyện làm quen. Một lần, anh giúp tôi bình tĩnh và cho lời khuyên để giải quyết sự cố tai nạn. Sự chín chắn, bình tĩnh ấy khiến tôi cảm thấy ấn tượng và muốn thân thiết với anh hơn. Sau đó, bà tôi mất, ở xa xứ tôi không thể về được nên rất buồn và sốc, anh chủ động quan tâm và muốn đến an...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="talk-center">
+              <div class="category-content talk-content">
+                <div class="category-new-left talk-new-left">
+                  <div class="category-new-title newstop-sub-caption talk-new-title caption">Hạnh phúc nào cho người thứ ba</div>
+                  <div class="category-new-content newstop-sub-comment talk-new-content">Tôi đau lòng, xót xa, hối hận, tự trách mình chỉ là người đến sau, cười lặng lẽ sau lưng hạnh phúc của người khác.</div>
+                </div>
+              </div>
+              <div class="category-content talk-content">
+                <div class="category-new-left talk-new-left">
+                  <div class="category-new-title newstop-sub-caption talk-new-title caption">Không ưng con dâu tương lai</div>
+                  <div class="category-new-content newstop-sub-comment talk-new-content">Gần đây, nghe tin TP HCM đã trở thành vùng xanh, tôi bí mật bay vào thăm con trai mà không báo trước. Tôi đến địa chỉ mỗi khi gửi quà vào cho con.</div>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+            <div class="category-wrap-two">
+              
+              <div class="category-wrap-item">
+                <ul class="category-list">
+                <li class="category-item category-firstchild caption">Ý kiến</li>
+              </ul>
+              <div class="travel-wrapper">
+                <div class="travel-left">
+                  <div class="travel-wrap">
+                    <div class="category-content travel-content">
+                      <img src="./assets/images/idea.jpg" alt="image" class="category-img travel-img">
+                      <div class="category-new-left travel-new-left">
+                        <div class="category-new-title newstop-sub-caption travel-new-title caption">Quay cuồng vì đất quê tăng giá tiền tỷ</div>
+                        <div class="category-new-content newstop-sub-comment travel-new-content">'Anh em cha mẹ con cái trở mặt nhau chỉ vì giá đất. Họ xin được chia đất sớm rồi bán đi chỗ khác ở'.</div>
+                      </div>
+                    </div>
+                    <div class="category-content travel-content">
+                      <div class="category-new-left travel-new-left">
+                        <div class="category-new-title newstop-sub-caption travel-new-title caption">10 lý do mở cửa trường mầm non</div>
+                        <div class="category-new-content newstop-sub-comment travel-new-content">Nguy cơ lây nhiễm với trẻ mầm non khi đến trường và ở nhà là như nhau, vậy tại sao chúng ta không chọn phương án tích cực hơn.</div>
+                      </div>
+                    </div>
+                    <div class="category-content travel-content">
+                      <div class="category-new-left travel-new-left">
+                        <div class="category-new-title newstop-sub-caption travel-new-title caption">Đòi hỏi thưởng Tết kiểu vô cảm</div>
+                        <div class="category-new-content newstop-sub-comment travel-new-content">Thưởng Tết vốn được người Việt xem như một nét văn hóa, thể hiện sự tri ân của doanh nghiệp, nhưng năm nay nên xem là một ngoại lệ.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="category-wrap-item">
+                <ul class="category-list" >
+                  <li class="category-item category-firstchild caption">Hài</li>
+                  <li class="category-item">Cười</li>
+                  <li class="category-item">Đố vui</li>
+                  <li class="category-item">Chuyện lạ</li>
+                </ul>
+                <div class="travel-wrapper">
+                  <div class="travel-left">
+                    <div class="travel-wrap">
+                      <div class="category-content travel-content">
+                        <img src="./assets/images/comedy.jpg" alt="image" class="category-img travel-img">
+                        <div class="category-new-left travel-new-left">
+                          <div class="category-new-title newstop-sub-caption travel-new-title caption">Bạn nhìn thấy gì ngoài con lừa?</div>
+                          <div class="category-new-content newstop-sub-comment travel-new-content">Giải đố nhiều năm mà chỉ thấy có một con lừa trong hình này thì bạn nên đi khám mắt ngay.</div>
+                        </div>
+                      </div>
+                      <div class="category-content travel-content">
+                        <div class="category-new-left travel-new-left">
+                          <div class="category-new-title newstop-sub-caption travel-new-title caption">Pha phá bóng bi-a đánh như không</div>
+                          <div class="category-new-content newstop-sub-comment travel-new-content">'Không phải ai cũng có được cú phá bóng như không phá thế này đâu, đỉnh đấy', một người hài hước bình luận.</div>
+                        </div>
+                      </div>
+                      <div class="category-content travel-content">
+                        <div class="category-new-left travel-new-left">
+                          <div class="category-new-title newstop-sub-caption travel-new-title caption">Dê rọi đèn pin khi ăn cỏ vì trời tối</div>
+                          <div class="category-new-content newstop-sub-comment travel-new-content">Vì trời tối nên con dê được chủ cho đeo đèn pin đội đầu để ra vườn gặm cỏ.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="talk-right">
+            <div class="selling-box">
+              <div class="selling-title">
+                <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v522/v2_2019/pc/graphics/logo-raovat.svg" alt="image" class="selling-logo">
+                <div class="selling-upload">Đăng tin ngay</div>
+              </div>
+              <ul class="selling-slider" id="selling-slider">
+                <li class="selling-item">
+                  <img src="./assets/images/selling1.jpg" alt="image" class="selling-avatar">
+                  <span class="selling-name">Bán đất trong KDC Tên Lửa 2 mặt tiền 16m</span>
+                  <span class="selling-price">1 tỷ 200 triệu</span>
+                  <span class="selling-address">TP Hồ Chí Minh</span>
+                  <button class="selling-action">Liên hệ</button>
+                </li>
+                <li class="selling-item">
+                  <img src="./assets/images/selling2.png" alt="image" class="selling-avatar">
+                  <span class="selling-name">Bán Xuất Ngoại Giao Giá Chủ Đầu Tư Dự Án</span>
+                  <span class="selling-price">Thỏa thuận</span>
+                  <span class="selling-address">Thanh Hóa</span>
+                  <button class="selling-action">Liên hệ</button>
+                </li>
+                <li class="selling-item">
+                  <img src="./assets/images/selling3.jpg" alt="image" class="selling-avatar">
+                  <span class="selling-name">Thưởng 1 tỷ đồng nếu tìm thấy ghế massage</span>
+                  <span class="selling-price">Thỏa thuận</span>
+                  <span class="selling-address">TP Hồ Chí Minh</span>
+                  <button class="selling-action">Liên hệ</button>
+                </li>
+                <li class="selling-item">
+                  <img src="./assets/images/selling4.jpg" alt="image" class="selling-avatar">
+                  <span class="selling-name">Bán Gấp 260m2 đối diện KCN Tân Tạo</span>
+                  <span class="selling-price">2 tỷ 100 triệu</span>
+                  <span class="selling-address">TP Hồ Chí Minh</span>
+                  <button class="selling-action">Liên hệ</button>
+                </li>
+              </ul>
+            </div>
+            <div class="bank-box">
+              <div class="bank-title">Ebank</div>
+              <ul class="bank-list">
+                <li class="bank-item">
+                  <div class="bank-item-row">
+                    <img src="" alt="" class="bank-item-img">
+                    <div class="bank-item-desc"></div>
+                  </div>
+                  <div class="bank-item-row">
+                    <img src="" alt="" class="bank-item-img">
+                    <div class="bank-item-desc"></div>
+                  </div>
+                  <div class="bank-item-row">
+                    <img src="" alt="" class="bank-item-img">
+                    <div class="bank-item-desc"></div>
+                  </div>
+                </li>
+                <li class="bank-item">
+                  <div class="bank-item-row">
+                    <img src="" alt="" class="bank-item-img">
+                    <div class="bank-item-desc"></div>
+                  </div>
+                  <div class="bank-item-row">
+                    <img src="" alt="" class="bank-item-img">
+                    <div class="bank-item-desc"></div>
+                  </div>
+                  <div class="bank-item-row">
+                    <img src="" alt="" class="bank-item-img">
+                    <div class="bank-item-desc"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="empty-box"></div>
+          </div>
+        </div>
+
+
+        <footer class="footer d-flex">
+          <div class="footer-top">
+            <div class="col-2">
+              <div class="footer-menu-item">Trang chủ</div>
+              <div class="footer-menu-item">Video</div>
+              <div class="footer-menu-item">Podcast</div>
+              <div class="footer-menu-item">Ảnh</div>
+              <div class="footer-menu-item border-bottom">Infographícs</div>
+              <div class="footer-menu-item">Mới nhất</div>
+              <div class="footer-menu-item">Xem nhiều</div>
+              <div class="footer-menu-item">Tin nóng</div>
+            </div>
+            <div class="col-2">
+              <div class="footer-menu-item">Thời sự</div>
+              <div class="footer-menu-item">Góc nhìn</div>
+              <div class="footer-menu-item">Thế giới</div>
+              <div class="footer-menu-item">Kinh doanh</div>
+              <div class="footer-menu-item">Giải trí</div>
+            </div>
+            <div class="col-2">
+              <div class="footer-menu-item">Thể thao</div>
+              <div class="footer-menu-item">Pháp luật</div>
+              <div class="footer-menu-item">Giáo dục</div>
+              <div class="footer-menu-item">Sức khỏe</div>
+              <div class="footer-menu-item">Đời sống</div>
+              <div class="footer-menu-item">Du lịch</div>
+            </div>
+            <div class="col-2">
+              <div class="footer-menu-item">Khoa học</div>
+              <div class="footer-menu-item">Số hóa</div>
+              <div class="footer-menu-item">Xe</div>
+              <div class="footer-menu-item">Ý kiến</div>
+              <div class="footer-menu-item">Tâm sự</div>
+              <div class="footer-menu-item">Hài</div>
+            </div>
+            <div class="col-2">
+              <div class="footer-menu-item">Rao vặt</div>
+              <div class="footer-menu-item">Shop VnExpress</div>
+              <div class="footer-menu-item">Startup</div>
+              <div class="footer-menu-item">Mua ảnh VnExpress</div>
+              <div class="footer-menu-item">Mua ảnh VnExpress</div>
+              <div class="footer-menu-item">eBox</div>
+            </div>
+            <div class="col-2">
+              <div class="footer-menu-item">Tải ứng dụng</div>
+                <div class="footer-menu-item">
+                  <div class="footer-menu-wrap-img">
+                    <img src="./assets/images/icon.png" alt="">
+                    <span>VnExpress</span>
+                  </div>
+                  <div class="footer-menu-wrap-img">
+                    <img src="./assets/images/icon.png" alt="">
+                    <span>International</span>
+                  </div>
+                </div>
+                <div class="footer-menu-item">
+                  Liên hệ
+                </div>
+                <div class="footer-menu-item">
+                  <span><i class="fas fa-envelope"></i>
+                  Tòa soạn</span>
+                </div>
+                <div class="footer-menu-item border-bottom">
+                  <span><i class="fas fa-envelope"></i>
+                  Hợp tác bản quyền</span>
+              </div>
+                <div class="footer-menu-item">
+                  Đường dây nóng
+              </div>
+                <div class="footer-menu-item">
+                  <div class="footer-menu-wrap">
+                    <span>083.888.0123</span>
+                    <span>(Hà Nội)</span>
+                  </div>
+                  <div class="footer-menu-wrap">
+                    <span>082.233.3555</span>
+                    <span>(TP. Hồ Chí Minh)</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-bottom-branch">
+              <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v522/v2_2019/pc/graphics/logo.svg" alt="image" class="col-6 footer-bottom-logo">
+              <div class="footer-bottom-social col-6">
+                <span>RSS</span>
+                <span>Theo dõi VnExpress trên</span>
+                <div class="footer-bottom-fb">
+                  <i class="fab fa-facebook"></i>
+                </div>
+                <div class="footer-bottom-twitter">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <div class="footer-bottom-ytb">
+                  <i class="fab fa-youtube"></i>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom-info">
+              <div class="col-3">
+                <p style="font-weight: bold;">Báo tiếng Việt nhiều người xem nhất</p>
+                <p>Thuộc Bộ Khoa học Công nghệ</p>
+                <p>Số giấy phép: 548/GP-BTTTT ngày 24/08/2021</p>
+              </div>
+              <div class="col-3">
+                <p>Phó Tổng Biên tập phụ trách: Phạm Hiếu</p>
+                <p>Địa chỉ: Tầng 5, Tòa nhà FPT, 17 phố Duy Tân, Cầu Giấy, Hà Nội</p>
+                <p>Điện thoại: 024 7300 8899 - máy lẻ 4500</p>
+              </div>
+              <div class="col-3">
+                <p>© 1997-2022. Toàn bộ bản quyền thuộc VnExpress</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+
       </div>
     </div>
 

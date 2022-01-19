@@ -119,13 +119,6 @@ const app = {
         "Thành phố ghi nhận 9 bệnh nhân Covid-19 tử vong trong ngày 16/1, bên cạnh 6 trường hợp chuyển từ tỉnh, thành khác đến.",
       comment: 19,
     },
-    {
-      caption: "Hành khách mua vé máy bay dịp Tết tăng mạnh",
-      image: "./assets/images/newbottomleft17.jpg",
-      content:
-        "Nhiều chuyến bay đã được hành khách mua vé đạt số chỗ từ 70% đến 90% như các chặng từ TP HCM đi Hà Nội, Vinh, Thanh Hóa.",
-      comment: 0,
-    },
   ],
   inflectionStatistic: [
     {
@@ -502,7 +495,7 @@ const app = {
   slickSlider: function() {
     $(document).ready(function () {
       $("#chart-heading-list").slick({
-        slidesToShow: 6.5,
+        slidesToShow: 6,
         autoplay: true,
         autoplaySpeed: 1000,
         infinite: true,
@@ -516,6 +509,28 @@ const app = {
         infinite: true,
         prevArrow: `<button type='button' class='slick-prev-slider slick-arrow-slider'><i class="fas fa-chevron-left"></i></button>`,
         nextArrow: `<button type='button' class='slick-next-slider slick-arrow-slider'><i class="fas fa-chevron-right"></i></button>`,
+      });
+      $("#sport-match").slick({
+        slidesToShow: 4,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        infinite: true,
+        prevArrow: `<button type='button' class='slick-prev-match slick-arrow-match'><i class="fas fa-chevron-left"></i></button>`,
+        nextArrow: `<button type='button' class='slick-next-match slick-arrow-match'><i class="fas fa-chevron-right"></i></button>`,
+      });
+      $("#health-doctor-list").slick({
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        infinite: true,
+        arrows: false,
+      });
+      $("#selling-slider").slick({
+        slidesToShow: 2,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        infinite: true,
+        arrows: false,
       });
     });
   },

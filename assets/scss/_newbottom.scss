@@ -1,5 +1,7 @@
 .newbottom {
   margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-border;
   @include flex();
   &-left {
     border-right: 1px solid $color-border;
@@ -265,3 +267,37 @@
 .slick-next-slider {
   right: 5px;
 }
+
+.slider-after-newbottom {
+  font-size: 1.4rem;
+  @include flex(center, flex-start);
+  border-bottom: 1px solid $color-border;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  &-caption {
+    color: $color-text-light;
+  }
+  &-list {
+    @include flex(center, space-between);
+    margin-bottom: 0;
+  }
+  &-item {
+    margin-left: 40px;
+    color: $color-purple;
+    text-decoration: underline;
+    // white-space: nowrap;
+    // width: auto !important;
+  }
+}
+
+// .slick-prev-afternewbottom {
+//   right: 20px;
+// }
+// .slick-next-afternewbottom {
+//   right: 0;
+// }
+// .slick-arrow-afternewbottom {
+//   width: 30px;
+//   height: 30px;
+//   background-color:red;
+// }
